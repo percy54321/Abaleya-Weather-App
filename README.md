@@ -1,4 +1,4 @@
-# Weather App
+# Abaleya Weather App
 
 The **Weather App** is a Flutter application that allows users to search for and view real-time weather data for any city. It features responsive design across mobile, tablet, and desktop views, includes a mobile drawer, and uses GetX for state management.
 
