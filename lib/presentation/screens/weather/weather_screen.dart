@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:weather_app/core/controllers/theme_controller.dart';
 import '../../../core/controllers/weather_controller.dart';
 import '../../../core/widgets/drawer.dart';
 import 'responsive/weather_desktop.dart';
@@ -11,6 +13,7 @@ class WeatherApp extends GetView<WeatherController> {
 
   @override
   Widget build(BuildContext context) {
+    final themeController = Get.find<ThemeController>();
     return LayoutBuilder(
       builder: (context, constraints) {
         bool isMobile = constraints.maxWidth < 600;
@@ -22,6 +25,7 @@ class WeatherApp extends GetView<WeatherController> {
               'Weather App',
               style: Theme.of(context).textTheme.titleLarge,
             ),
+
             centerTitle: false,
 
             // Conditionally display the leading icon (drawer) for mobile only
@@ -36,7 +40,12 @@ class WeatherApp extends GetView<WeatherController> {
                       );
                     },
                   )
-                : null, // Remove the drawer icon for tablet and desktop
+                : null,
+            actions: [
+              IconButton(
+                  onPressed: () => themeController.toggleTheme(),
+                  icon: Icon(Iconsax.moon))
+            ], // Remove the drawer icon for tablet and desktop
           ),
           body: isMobile
               ? const MobileWeatherView() // Mobile view
