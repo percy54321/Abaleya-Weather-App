@@ -58,7 +58,7 @@ lib/
 │   └── theme.dart                   # Light and dark theme definitions
 └── main.dart                        # Main entry point for the app
 
-
+  ```
 
 
 ### Installation
