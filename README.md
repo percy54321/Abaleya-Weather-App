@@ -148,7 +148,7 @@ The app follows the Model-View-Controller (MVC) architecture pattern.
 
 ## Themes
 
-The app supports light and dark themes. The theme can be toggled using the `toggleTheme()` method in the `WeatherController`.
+The app supports light and dark themes. The theme can be toggled using the `toggleTheme()` method in the `ThemeController`.
 
 ## Storage
 
